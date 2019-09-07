@@ -1,0 +1,877 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Montserrat,Arial;
+    overflow-x: hidden;
+}
+.container{
+    width: 1185px;
+    margin: auto;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    outline: none;
+}
+@media (max-width:767px) {
+    .container {
+        width:99%;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) and  (max-width:1199px){
+    .container {
+        width: 975px;
+    }
+}
+::selection{
+    background-color: #da2c2d;
+}
+::-moz-selection{
+    background-color: #da2c2d;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #da2c2d;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #111b29;
+}
+
+.slider .container{
+    width: 100%;
+}
+.slider .container .header{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    z-index: 100;
+    font-family: Raleway;
+}
+.slider .container .header h1{
+    font-family: 'Grand Hotel';
+    font-size: 70px;
+}
+.nav-bar{
+    background-color: #111b29;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-bar .container{
+    display: flex;
+    justify-content: space-around;
+}
+.nav-bar .container .logo{
+    display: flex;
+    padding: 18px 10px;
+}
+.nav-bar .container .logo img{
+    height: 24px;
+}
+.nav-bar .container .content,
+.nav-bar .container .content ul{
+    display: flex;
+}
+.nav-bar .container .content ul li{
+    padding: 0 10px;
+    cursor: pointer;
+    align-self: center;
+}
+.nav-bar .container .content ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 15px;
+    padding: 18px 0;
+    transition: 0.3s;
+}
+.nav-bar .container .content ul li a:hover{
+    color: #da2c2d;
+}
+.nav-bar .container .content .search{
+    margin: auto 10px;
+    width: 237px;
+}
+.nav-bar .container .content .search .icon{
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-bar .container .content .search .icon:hover i{
+    color: #da2c2d;
+}
+.nav-bar .container .content .search .icon i{
+    font-size: 15px;
+    color: white;
+    transition: 0.3s;
+}
+.nav-bar .container .content .search input{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    line-height: 2;
+    color: white;
+    outline: none;
+    visibility: hidden;
+    transition: width 0.5s;
+    width: 0;
+}
+.nav-bar .container .list-btn{
+    display: flex;
+    width: 37px;
+}
+.nav-bar .container .list-btn #menu-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 37px;
+}
+.nav-bar .container .list-btn #menu-btn:hover{
+    color: #da2c2d;
+}
+.nav-full-view .container .content {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    transition: width 0.4s;
+    overflow: hidden;
+}
+.nav-full-view .container .content .overlay-content{
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
+.nav-full-view .container .content .overlay-content a{
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    line-height: 3;
+}
+.nav-full-view .container .content a:hover {
+    color: #da2c2d;
+}
+.nav-full-view .container .content .closebtn{
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    padding: 8px 10px;
+    font-size: 30px;
+    color: white;
+    transition: 0.3s;
+}
+.nav-full-view .container .content .closebtn:hover{
+    color: #da2c2d;
+}
+.nav-full-view .container .content .search{
+    line-height: 3;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.nav-full-view .container .content .search:hover{
+    color: #da2c2d;
+}
+.nav-full-view .container .content .search .icon{
+    transition: 0.3s;
+}
+.nav-full-view .container .content .search #full-searchBar{
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 25px;
+    color: white;
+    outline: none;
+    visibility: hidden;
+    transition: width 0.3s;
+    width: 0;
+}
+.aboutCarDealer{
+    background-color: #f4f8fa;
+}
+.aboutCarDealer .container{
+    display: block;
+    text-align: center;
+    padding: 60px 0;
+    text-transform: uppercase;
+}
+.aboutCarDealer .container .title h4{
+    color: #909090;
+}
+.aboutCarDealer .container .title h1{
+    margin: 20px 0;
+    font-size: 35px;
+    font-weight: bolder;
+    word-spacing: 5px;
+}
+.aboutCarDealer .container .service{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.aboutCarDealer .container .service .row1,
+.aboutCarDealer .container .service .row2,
+.aboutCarDealer .container .service .row3,
+.aboutCarDealer .container .service .row4{
+    display: inline-flex;
+}
+.aboutCarDealer .container .service div .icon{
+    font-size: 50px;
+    color: #da2c2d;
+    padding-right:25px ;
+}
+.aboutCarDealer .container .service div .description{
+    text-align: left;
+}
+.aboutCarDealer .container .service div .description h1{
+    color: #da2c2d;
+    font-size: 26px;
+    font-weight: bolder;
+}
+.aboutCarDealer .container .service div .description h4{
+    padding-top: 5px;
+    font-size: 13px;
+    color: #696969;
+}
+.aboutCarDealer .container .callUs{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.aboutCarDealer .container .callUs .before {
+    margin-right: 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+.aboutCarDealer .container .callUs .after {
+     margin-left: 10px;
+     background: white;
+     border-radius: 5px;
+     border: 1px solid #bfbfbf;
+ }
+.aboutCarDealer .container .callUs .before h5{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px 0 10px;
+}
+.aboutCarDealer .container .callUs .after h5{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px 0 20px;
+}
+.aboutCarDealer .container .callUs .img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px red;
+    overflow: hidden;
+    height: 60px;
+}
+.aboutCarDealer .container .callUs .img img{
+    height: 100%;
+}
+.aboutCarDealer .container .button button{
+    padding: 15px 40px;
+    border: none;
+    background-color: #da2c2d;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.aboutCarDealer .container .button button:hover{
+    background-color: #2a2a2a;
+}
+.special-offers .container{
+    padding: 50px 0 ;
+    text-align: center;
+}
+.special-offers .container .title h4{
+    color: #909090;
+}
+.special-offers .container .title h1{
+    margin: 20px 0;
+    font-size: 35px;
+    font-weight: bolder;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+.special-offers .container .carList{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.special-offers .container .carList #previous , #next{
+    width: 35px;
+    border: none;
+    opacity: 0.3;
+    background-color: #c3c3c3;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.special-offers .container .carList #previous:hover ,
+.special-offers .container .carList #next:hover{
+    opacity: 0.6;
+    background-color: #da2c2d;
+}
+.special-offers .container .carList #previous i,
+.special-offers .container .carList #next i{
+    font-size: 20px;
+    padding: 0 10px;
+}
+.special-offers .container .carList ul{
+    display: flex;
+    justify-content: space-around;
+}
+.special-offers .container .carList ul li{
+    opacity: 0.4;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.special-offers .container .carList ul li:hover{
+    opacity: 1;
+}
+.special-offers .container .carList ul li img{
+    width: 180px;
+}
+.special-offers .container .detail-container{
+    display: flex;
+}
+.special-offers .container .detail-container .img{
+    display: flex;
+    justify-content: center;
+}
+.special-offers .container .detail-container .img #img-previous,
+.special-offers .container .detail-container .img #img-next{
+    height: 50px;
+    align-self: center;
+    width: 20px;
+    border: none;
+    opacity: 0.3;
+    background-color: #c3c3c3;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.4s;
+    display: none;
+}
+.special-offers .container .detail-container .img #img-previous:hover,
+.special-offers .container .detail-container .img #img-next:hover{
+    opacity: 0.6;
+    background-color: #da2c2d;
+}
+.special-offers .container .detail-container .detail{
+    text-align: left;
+    padding: 0 10px;
+}
+.special-offers .container .detail-container .detail h2{
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.special-offers .container .detail-container .detail h3{
+    color: #da2c2d;
+    margin-bottom: 30px;
+}
+.special-offers .container .detail-container .detail h3 span{
+    font-size: 23px;
+}
+.special-offers .container .detail-container .detail button{
+    margin-top: 40px;
+    text-align: center;
+    width: 200px;
+    padding: 15px 20px;
+    background-color: #da2c2d;
+    border: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.special-offers .container .detail-container .detail button:hover{
+    background-color: #2a2a2a;
+}
+.special-offers .container .detail-container .detail button span{
+    transition: 0.5s ease;
+}
+.special-offers .container .detail-container .detail button span:after{
+    content: "\00bb";
+    transition: 0.3s ease;
+    position: absolute;
+    padding-left: 5px;
+    opacity: 0;
+}
+.special-offers .container .detail-container .detail button:hover span:after{
+    padding-left: 0;
+    opacity: 1;
+}
+.special-offers .container .detail-container .detail button:hover span{
+    padding-right: 20px;
+}
+.why-car-dealer {
+    background-color: #eff8f3;
+}
+.why-car-dealer .container{
+    text-align: center;
+}
+.why-car-dealer .container .title{
+    padding-top: 50px;
+}
+.why-car-dealer .container .title h1{
+    font-size: 75px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    font-family: arial;
+    color: #403948;
+}
+.why-car-dealer .container .title hr{
+    height: 8px;
+    border: none;
+    width: 100px;
+    background-color: #ec2829;
+    margin: 35px auto;
+    border-radius: 5px;
+}
+.why-car-dealer .container .figures{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 90px;
+}
+.why-car-dealer .container .figures figure img{
+    width: 130px;
+    height: 130px;
+}
+.why-car-dealer .container .figures figure h3{
+    font-size: 20px;
+    color: #909090;
+}
+.testimonials{
+    background: url("../img/testimonial-bg.jpg") no-repeat fixed;
+    background-size: cover;
+}
+.testimonials .container .title{
+    text-align: center;
+}
+.testimonials .container .title h1{
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: #403948;
+}
+.testimonials .container .title hr{
+    height: 6px;
+    border: none;
+    width: 100px;
+    background-color: #ec2829;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.testimonials .container .clients{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+.testimonials .container .clients .client1,
+.testimonials .container .clients .client2,
+.testimonials .container .clients .client3 {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+.testimonials .container .clients .client1 .img,
+.testimonials .container .clients .client2 .img,
+.testimonials .container .clients .client3 .img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    transition: 0.4s;
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+}
+.testimonials .container .clients .client1 .img img,
+.testimonials .container .clients .client2 .img img,
+.testimonials .container .clients .client3 .img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+.testimonials .container .clients .client1 .info,
+.testimonials .container .clients .client2 .info,
+.testimonials .container .clients .client3 .info{
+    width: 320px;
+    height: 320px;
+    background-color: #a7a2a2;
+    transition: 0.4s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+}
+.testimonials .container .clients .client1 .info h3,
+.testimonials .container .clients .client2 .info h3,
+.testimonials .container .clients .client3 .info h3{
+    margin-top: 50px;
+    font-size: 20px;
+    color: #da2c2d;
+    transform: scale(0);
+    transition: 0.8s;
+    text-transform: capitalize;
+}
+.testimonials .container .clients .client1 .info p,
+.testimonials .container .clients .client2 .info p,
+.testimonials .container .clients .client3 .info p{
+    margin-top: 20px;
+    color: white;
+    width: 80%;
+    font-size: 15px;
+    margin-left: 30px;
+    transform: scale(0);
+    transition: 0.8s;
+}
+.testimonials .container .clients .client1:hover .img,
+.testimonials .container .clients .client2:hover .img,
+.testimonials .container .clients .client3:hover .img{
+    opacity: 0;
+}
+.testimonials .container .clients .client1:hover .img img,
+.testimonials .container .clients .client2:hover .img img,
+.testimonials .container .clients .client3:hover .img img{
+    transform: scale(5);
+}
+.testimonials .container .clients .client1:hover .info,
+.testimonials .container .clients .client2:hover .info,
+.testimonials .container .clients .client3:hover .info{
+    opacity: 1;
+    transform: scale(1);
+}
+.testimonials .container .clients .client1:hover .info h3,
+.testimonials .container .clients .client1:hover .info p,
+.testimonials .container .clients .client2:hover .info h3,
+.testimonials .container .clients .client2:hover .info p,
+.testimonials .container .clients .client3:hover .info h3,
+.testimonials .container .clients .client3:hover .info p{
+    transform: scale(1);
+}
+.footer{
+    background-color: #111b29;
+    text-align: center;
+}
+.footer .container .subscribe{
+    color: white;
+    background-color: #da2c2d;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px 0;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footer .container h3{
+    font-weight: lighter;
+    font-size: 15px;
+}
+.footer .container h3:after{
+    content: '|';
+    padding-left: 60px;
+}
+.footer .container .input input{
+    line-height: 18px;
+    background: transparent;
+    border: 1px solid #da2c2d;
+    color: white;
+    outline: none;
+}
+.footer .container .input input::placeholder{
+    color: white;
+}
+.footer .container .input a{
+    color: white;
+}
+.footer .container .links{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 50px 0;
+}
+.footer .container .links h4{
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.footer .container .links .our-partner span,
+.footer .container .links .information span,
+.footer .container .links .contact-info span{
+    display: block;
+    color: #93abcd;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.footer .container .links .our-partner span a,
+.footer .container .links .information span a{
+    padding: 5px;
+    color: #93abcd;
+    transition: 0.3s;
+    margin-left: -12px;
+    margin-right: 12px;
+}
+.footer .container .links .our-partner span i,
+.footer .container .links .information span i{
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+.footer .container .links .our-partner span:hover a,
+.footer .container .links .information span:hover a{
+    color: #da2c2d;
+    margin-left: 0;
+    margin-right: 0;
+}
+.footer .container .links .our-partner span:hover i,
+.footer .container .links .information span:hover i{
+    color: #da2c2d;
+    opacity: 1;
+    visibility: visible;
+}
+.footer .container .copy-rights{
+    color: white;
+}
+.footer .container .copy-rights .social .social-links{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.footer .container .copy-rights .social .social-links a{
+    background: none;
+    margin: auto 10px;
+    font-size: 25px;
+    border: 2px solid #DA3C3E;
+    color: #DA3C3E;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+.footer .container .copy-rights .social .social-links a:hover{
+    background-color: #DA3C3E;
+    color: white;
+}
+.footer .container #toTop{
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: #ff363f;
+    outline:1px solid #dd5342;
+    outline-offset: 5px;
+    cursor: pointer;
+    transition:all 0.2s ease;
+    display: none;
+    z-index: 150;
+}
+.footer .container #toTop i{
+    padding: 13px;
+    position: relative;
+    top: 0;
+}
+.footer .container #toTop:hover{
+    outline: 0 solid white;
+    outline-offset: 15px;
+}
+.footer .container #toTop:hover i{
+    animation: to-top-animate 0.8s ease-in-out infinite;
+}
+@keyframes to-top-animate {
+    0%{top: 0;}
+    25%{top: 3px;}
+    50%{top: 0;}
+    75%{top: -3px;}
+    100%{top: 0;}
+}
+#snackbar{
+    visibility: hidden;
+    z-index: 150;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #9f1e1b;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+@keyframes fadein {
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+/* media query for home.html */
+@media (min-width: 768px) and (max-width: 991px){
+    .nav-bar .container{
+        justify-content: space-between;
+    }
+    .nav-bar .container .content{
+        display: none;
+    }
+    .testimonials .container .clients{
+        display: block;
+    }
+    .testimonials .container .clients .client1,
+    .testimonials .container .clients .client2,
+    .testimonials .container .clients .client3{
+        margin: 5px auto;
+    }
+    .special-offers .container .detail-container{
+        display: block;
+    }
+    .special-offers .container .detail-container .detail{
+        text-align: center;
+    }
+    .special-offers .container .carList{
+        display: none;
+    }
+    .special-offers .container .detail-container .img #img-previous,
+    .special-offers .container .detail-container .img #img-next{
+        display: block;
+    }
+}
+@media (max-width: 767px){
+    .nav-bar .container{
+        justify-content: space-between;
+    }
+    .nav-bar .container .content{
+        display: none;
+    }
+    .special-offers .container .detail-container{
+        display: block;
+    }
+    .special-offers .container .detail-container .detail{
+        text-align: center;
+    }
+    .special-offers .container .carList{
+        display: none;
+    }
+    .special-offers .container .detail-container .img #img-previous,
+    .special-offers .container .detail-container .img #img-next{
+        display: block;
+    }
+    .testimonials .container .clients{
+        display: block;
+    }
+    .testimonials .container .clients .client1,
+    .testimonials .container .clients .client2,
+    .testimonials .container .clients .client3{
+        margin: 5px auto;
+    }
+    .aboutCarDealer .container .service{
+        display: block;
+        text-align: center;
+    }
+    .aboutCarDealer .container .service .row1,
+    .aboutCarDealer .container .service .row2,
+    .aboutCarDealer .container .service .row3,
+    .aboutCarDealer .container .service .row4{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .aboutCarDealer .container .service div .description{
+        text-align: center;
+    }
+    .aboutCarDealer .container .service div .icon{
+        padding: 0;
+    }
+    .special-offers .container .detail-container .img img{
+        width: 90%;
+        height: 100%;
+    }
+    .why-car-dealer .container .figures{
+        display: block;
+    }
+    .why-car-dealer .container .figures figure{
+        margin-bottom: 30px;
+    }
+    .testimonials .container .title h1{
+        letter-spacing: 0;
+        font-size: 42px;
+    }
+    .footer .container .subscribe h3{
+        display: none;
+    }
+    .footer .container .links{
+        display: block;
+        text-align: center;
+    }
+    .footer .container .links .our-partner,
+    .footer .container .links .information,
+    .footer .container .links .contact-info{
+        margin-bottom: 30px;
+    }
+    .footer .container .links .our-partner,
+    .footer .container .links .information{
+        width: auto;
+    }
+}

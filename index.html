@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Car Dealer</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="Css/Style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Raleway|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+<body>
+<div class="slider">
+    <div class="container">
+        <div id="wowslider-container1">
+            <div class="ws_images">
+                <ul>
+                    <li><img src="data1/images/slider1.jpg" alt="slider1" title="slider1" id="wows1_0"/></li>
+                    <li><a href="http://wowslider.com"><img src="data1/images/slider3.jpg" alt="slider html" title="slider3" id="wows1_1"/></a></li>
+                    <li><img src="data1/images/slider2.jpg" alt="slider2" title="slider2" id="wows1_2"/></li>
+                </ul>
+            </div>
+            <div class="ws_bullets">
+                <div>
+                    <a href="#" title="slider1"><span><img src="data1/tooltips/slider1.jpg" alt="slider1"/>1</span></a>
+                    <a href="#" title="slider3"><span><img src="data1/tooltips/slider3.jpg" alt="slider3"/>2</span></a>
+                    <a href="#" title="slider2"><span><img src="data1/tooltips/slider2.jpg" alt="slider2"/>3</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <h3>Avendator Style</h3>
+            <h1>Best Customative Theme</h1>
+        </div>
+    </div>
+</div>
+<nav class="nav-bar">
+    <div class="container">
+        <a href="index.html" class="logo"><img src="img/logo1.png"></a>
+        <div class="content">
+            <ul>
+                <li><a href="#" class="navBtns" onclick="navBtns(this)" id="home-btn">Home</a></li>
+                <li><a href="#" class="navBtns" onclick="navBtns(this)">Vehicles</a></li>
+                <li><a href="#" class="navBtns" onclick="navBtns(this)">Services</a></li>
+                <li><a href="#" class="navBtns" onclick="navBtns(this)">About</a></li>
+                <li><a href="#" class="navBtns" onclick="navBtns(this)">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon" onclick="searchBar()"><i class="fas fa-search"></i></span>
+                <input type="text" id="searchBar">
+            </div>
+        </div>
+        <div class="list-btn">
+            <button id="menu-btn" onclick="openNav()"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</nav>
+<nav class="nav-full-view">
+    <div class="container">
+        <div class="content" id="nav-full-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">Vehicles</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="search">
+                <span class="icon" onclick="fullSearchBar()"><i class="fas fa-search"></i></span>
+                <input type="text" id="full-searchBar">
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="aboutCarDealer">
+    <div class="container">
+        <header class="title">
+            <h4>About Dealer On</h4>
+            <h1>WELCOME TO Dealer On <i class="far fa-grin-alt"></i> </h1>
+        </header>
+        <section class="service">
+            <div class="row1">
+                <div class="icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <article class="description">
+                    <h1>1886</h1>
+                    <h4>NEW CARS IN STOCK</h4>
+                </article>
+            </div>
+            <div class="row2">
+                <div class="icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <article class="description">
+                    <h1>1248</h1>
+                    <h4>USED CARS IN STOCK</h4>
+                </article>
+            </div>
+            <div class="row3">
+                <div class="icon">
+                    <i class="far fa-smile"></i>
+                </div>
+                <article class="description">
+                    <h1>1521</h1>
+                    <h4>HAPPY CLIENTS</h4>
+                </article>
+            </div>
+            <div class="row4">
+                <div class="icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <article class="description">
+                    <h1>1886</h1>
+                    <h4>AWARDS</h4>
+                </article>
+            </div>
+        </section>
+        <section class="callUs">
+            <div class="before">
+                <h5>Have a question ?</h5>
+            </div>
+            <div class="img">
+                <img src="img/owner.jpg" width="60" height="60">
+            </div>
+            <div class="after">
+                <h5>CALL US : 1864757485</h5>
+            </div>
+        </section>
+        <div class="button">
+            <button>Learn more</button>
+        </div>
+    </div>
+</section>
+<section class="special-offers">
+    <div class="container">
+        <header class="title">
+            <h4>MOST WANTED ITEM</h4>
+            <h1>SPECIAL OFFERS</h1>
+        </header>
+        <figure class="carList">
+            <button id="previous" onclick="minusSlide()"><i class="fas fa-chevron-left"></i></button>
+            <ul>
+                <li onclick="offerSlider(0)" class="car-offer"><img src="img/car_offer0.png"></li>
+                <li onclick="offerSlider(1)" class="car-offer"><img src="img/car_offer1.png"></li>
+                <li onclick="offerSlider(2)" class="car-offer"><img src="img/car_offer2.png"></li>
+                <li onclick="offerSlider(3)" class="car-offer"><img src="img/car_offer3.png"></li>
+                <li onclick="offerSlider(4)" class="car-offer"><img src="img/car_offer4.png"></li>
+            </ul>
+            <button id="next" onclick="plusSlide()"><i class="fas fa-chevron-right"></i></button>
+        </figure>
+        <article class="detail-container">
+            <div class="img">
+                <button id="img-previous" onclick="minusSlide()"><i class="fas fa-chevron-left"></i></button>
+                <img src="img/car_offer0.png" id="car-img">
+                <button id="img-next" onclick="plusSlide()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="detail">
+                <h2 id="car-name">BMW I8 2018</h2>
+                <h3>Price : <strong><span id="car-price">95 000 $</span></strong></h3>
+                <p>
+                    An entirely new concept of sports car. More efficient –
+                    for example due to intelligent lightweight construction with carbon and aerodynamic design.
+                    More sustainable – with highly efficient...
+                </p>
+                <button><span>Order Now&nbsp;&nbsp;</span></button>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="why-car-dealer">
+    <div class="container">
+        <header class="title">
+            <h1>why dealer on?</h1>
+            <hr>
+        </header>
+        <article class="figures">
+            <figure class="col1">
+                <img src="img/reasonFigure1.gif">
+                <h3>Only certified motors</h3>
+            </figure>
+            <figure class="col2">
+                <img src="img/reasonFigure2.gif">
+                <h3>7 days free trial</h3>
+            </figure>
+            <figure class="col3">
+                <img src="img/reasonFigure3.gif">
+                <h3>Free delivery</h3>
+            </figure>
+            <figure class="col4">
+                <img src="img/reasonFigure4.gif">
+                <h3>Free test drives</h3>
+            </figure>
+        </article>
+    </div>
+</section>
+<section class="testimonials">
+    <div class="container">
+        <header class="title">
+            <h1>TESTIMONIALS</h1>
+            <hr>
+        </header>
+        <article class="clients">
+            <figure class="client1">
+                <div class="img"><img src="img/Client1.jpg" alt="client"></div>
+                <div class="info">
+                    <h3>amanda richardson</h3>
+                    <p>
+                        You guys are really amazing! I have not yet seen a car dealer who offers so much at such an affordable price.
+                        I have found what I wanted in your vehicle catalog. Moreover,
+                        I have sold my old car with the help of your website and your staff provided me with the considerable discount for my new car.
+                    </p>
+                </div>
+            </figure>
+            <figure class="client2">
+                <div class="img"><img src="img/Client2.jpg" alt="client"></div>
+                <div class="info">
+                    <h3>george smith</h3>
+                    <p>
+                        I’m glad to be a happy owner of my dream car, Range Rover Discovery,
+                        which I bought thanks to the recommendations of your consultants.
+                        The whole process of purchasing was very smooth and the price was not too high for me.
+                        I will definitely recommend this car dealer to all my friends.
+                    </p>
+                </div>
+            </figure>
+            <figure class="client3">
+                <div class="img"><img src="img/Client3.jpg" alt="client"></div>
+                <div class="info">
+                    <h3>Cristal Smith</h3>
+                    <p>
+                        Dealer On has nice cars, great prices, and good service.
+                        I brought my old Citroen C4 with which I had no problems after one month of high mileage use.
+                        High price given to me for my car and low price accepted for the car I was buying was a huge surprise to me.
+                        I recommend this car dealer to everyone!
+                    </p>
+                </div>
+            </figure>
+        </article>
+    </div>
+</section>
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.0848343536018!2d-4.239038936818678!3d55.8678214142162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc413c4d49d8b9a9!2sEvans+Halshaw+Car+Store+Glasgow!5e0!3m2!1sen!2sus!4v1530383610644" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="subscribe">
+            <h3>Subscribe to our newsletter</h3>
+            <div class="input">
+                <input type="email" placeholder="Enter Your Email.." id="subscribe-email">
+                <a href="javascript:void(0)" onclick="sendSubscribe('subscribe-email')"><i class="far fa-paper-plane"></i></a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="our-partner">
+                <h4>our partners</h4>
+                <span><i class="fas fa-chevron-right"></i><a href="http://automobile.chimpgroup.com/">Apartments.Com</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="https://www.autotrader.com/">CareerBuilder.Com</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="https://www.cars.com/">Cars.Com</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="http://automobile.chimpgroup.com/">Automotive.Com</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="https://www.autotrader.com/">Cardoor.Com</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="https://www.cars.com/">AutoPRO.Com</a></span>
+            </div>
+            <div class="information">
+                <h4>information</h4>
+                <span><i class="fas fa-chevron-right"></i><a href="#">About Us</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="#">Contact Us</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="#">FAQ?</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="#">Site Map</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="#">Advanced Search</a></span>
+                <span><i class="fas fa-chevron-right"></i><a href="#">Get Help</a></span>
+            </div>
+            <div class="contact-info">
+                <h4>contact info</h4>
+                <span><i class="fas fa-home"></i>&nbsp;&nbsp;20 Kennedy St, Glasgow G4 0EB, UK</span>
+                <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-3000</span>
+                <span><i class="fas fa-phone"></i>&nbsp;&nbsp;+1 720-200-4200</span>
+                <span><i class="far fa-envelope"></i>&nbsp;&nbsp;support@dealeron.com</span>
+            </div>
+        </div>
+        <article class="copy-rights">
+            <div class="social">
+                <p>&copy; 2018 Dealer ON. All Rights Reserved. Developed by Ma7MOoOD A.SHaRaF.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://plus.google.com"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </article>
+        <button id="toTop" onclick="toTop()"><i class="fa fa-chevron-up"></i></button>
+        <div id="snackbar"></div>
+    </div>
+</footer>
+<script type="text/javascript" src="Javascript/Plugin.js"></script>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+</body>
+</html>
